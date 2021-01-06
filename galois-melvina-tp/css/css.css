@@ -62,7 +62,7 @@ html, body {
     position: fixed;
     border-radius: 100%;
     top: 34px;
-    left: 695px;
+    right: 1.5%;
     width: 70px;
     height: 70px;
     z-index: 10000;
