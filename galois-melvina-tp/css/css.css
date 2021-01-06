@@ -337,7 +337,7 @@ box-shadow: 0 0 40px black;
       position: fixed;
       border-radius: 100%;
       top: 34px;
-      left: 1275px;
+      right: 1.5%;
       width: 70px;
       height: 70px;
       z-index: 10000;
