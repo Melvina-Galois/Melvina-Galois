@@ -1,0 +1,346 @@
+@font-face {
+    font-family: 'basiersquare';
+    src: url('../fonts/basiersquare-regular-webfont.woff2') format('woff2'),
+         url('../fonts/basiersquare-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {box-sizing: border-box}
+
+html, body {
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  overscroll-behavior-x: none;
+  cursor: url(../images/croiseur.png)25 25, auto;
+}
+.loading{
+  background-color: black;
+  position : fixed;
+  width:100%;
+  height:100%;
+  z-index: 100000000000;
+}
+#gif{
+  width: 130px;
+  height: 130px;
+  top:50%;
+  left:50%;
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+}
+.map {
+  overflow: hidden;
+  width: auto;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+.inner {
+  position:relative;
+  width:9379px;
+  height:13000px;
+  background:url(../images/tcwmapV4.svg) no-repeat center center / cover;
+}
+
+.hotspot {
+  position:absolute;
+}
+
+.back {
+    background-image: url("../images/cancel.svg");
+    background-size: 30px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    position: fixed;
+    border-radius: 100%;
+    top: 34px;
+    left: 695px;
+    width: 70px;
+    height: 70px;
+    z-index: 10000;
+    display:none;
+}
+
+.recommencer {
+  font-size: 50px;
+  font-weight: 700;
+  background: white;
+  color: #1d2f89;
+  border: solid 2px #1d2f89;
+  padding: 60px;
+  z-index: 100000000;
+  position: fixed;
+  display : none;
+  top : 50%;
+  left : 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  border-radius: 20px;
+  font-family: basiersquare;
+box-shadow: 0 0 40px black;
+
+}
+
+.texte {
+  color: #1d2f89;
+  font-size: 50px;
+  font-family: basiersquare;
+  padding-top: 25px;
+}
+
+.bouton {
+  color: white;
+  background: #1d2f89;
+  border: solid 2px black;
+  border-radius: 20px;
+  padding: 20px;
+  transition : all 320ms ease;
+}
+
+.bouton:hover{
+  color: #1d2f89;
+  background: white;
+  border:solid 7px black;
+  opacity: 90%;
+}
+.bouton:active{
+  transition: all 120ms ease;
+  color: white;
+  background: black;
+  border: solid 2px black;
+  font-size: 40px;
+
+}
+
+
+#lave {
+  content: url("../images/lave.svg");
+  top: 12594px;
+  left: 1896px;
+  width: 120px;
+  height: 120px;
+
+}
+
+#verdure {
+  content: url("../images/verdure.svg");
+  top: 10490px;
+  left: 4361px;
+  width: 120px;
+  height: 120px;
+
+}
+
+#verdure2 {
+  content: url("../images/verdure.svg");
+  top: 4955px;
+  left: 5520px;
+  width: 120px;
+  height: 120px;
+
+}
+
+#citadin {
+  content: url("../images/citadin.svg");
+  top: 2939px;
+  left: 4668px;
+  width: 120px;
+  height: 120px;
+
+}
+
+#citadin2 {
+  content: url("../images/citadin.svg");
+  top: 5070px;
+  left: 1720px;
+  width: 120px;
+  height: 120px;
+
+}
+
+#aquatique {
+  content: url("../images/aquatique.svg");
+  top: 8943px;
+  left: 7323px;
+  width: 120px;
+  height: 120px;
+
+}
+
+#aquatique2 {
+  content: url("../images/aquatique.svg");
+  top: 2488px;
+  left: 8844px;
+  width: 120px;
+  height: 120px;
+
+}
+
+#poussiere {
+  content: url("../images/poussiere.svg");
+  top: 10575px;
+  left: 7025px;
+  width: 120px;
+  height: 120px;
+
+}
+
+#sable {
+  content: url("../images/sable.svg");
+  top: 11582px;
+  left: 1026px;
+  width: 120px;
+  height: 120px;
+
+}
+/*J'ai essayé des slide-in mais ça ne me plaisait pas, du coup c'est normal que les fiches infos apparaissent directement*/
+.info{
+  width: 1920px;
+  height: 1440px;
+  position: fixed;
+  right: -1000vw;
+  top: 0;
+  /*transition: all 1000ms ease;*/
+}
+
+.info.open{
+  right:0;
+}
+#kamino {
+
+  content: url("../images/kamino.png");
+}
+
+#coruscant {
+
+  content: url("../images/coruscant.png");
+}
+
+#geonosis {
+
+  content: url("../images/geonosis.png");
+}
+
+#mandalore {
+
+  content: url("../images/mandalore.png");
+}
+
+#naboo {
+
+  content: url("../images/naboo.png");
+}
+
+#kashyyyk {
+
+  content: url("../images/kashyyyk.png");
+}
+
+#mustafar {
+
+  content: url("../images/mustafar.png");
+}
+
+#moncalamari {
+
+  content: url("../images/moncalamari.png");
+}
+
+#bespin {
+
+  content: url("../images/bespin.png");
+}
+
+
+
+
+/*MENU*/
+
+.hotspot {
+  position:absolute;
+}
+
+
+.hotspot.found {
+  opacity:.5 !important;
+}
+
+.count {
+  position:fixed;
+  top:20px;
+  left:20px;
+  background:white;
+  padding:10px 20px;
+  border-radius:30px;
+  font-family:basiersquare;
+  font-size:32px;
+  z-index:10000;
+}
+
+.menu {
+  position:fixed;
+  top:100px;
+  left:20px;
+  z-index:10000;
+}
+
+.menu-item {
+  width:250px;
+  background:white;
+  padding:8px 16px;
+  border-radius:3px;
+  font-family: basiersquare;
+  font-size:22px;
+  margin-bottom:4px;
+}
+
+.menu-item .item-not-found {
+  display:block;
+}
+
+.menu-item .item-found {
+  display:none;
+}
+
+.menu-item.found .item-not-found {
+  display:none;
+}
+
+.menu-item.found .item-found {
+  display:block;
+}
+
+@media screen and (max-width: 1440px) {
+  /*Il y a un écart entre la fiche technique de mes planètes et la carte, mais c'est voulu :) */
+  .info{
+    width: 1360px;
+    height: 1020px;
+    position: fixed;
+    right: -1000vw;
+    top: 0;
+  }
+
+  .back {
+      background-image: url("../images/cancel.svg");
+      background-size: 30px auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: white;
+      position: fixed;
+      border-radius: 100%;
+      top: 34px;
+      left: 1275px;
+      width: 70px;
+      height: 70px;
+      z-index: 10000;
+      display:none;
+  }
+}
